@@ -18,4 +18,24 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=spring
       - MONGO_INITDB_ROOT_PASSWORD=spring
       - MONGO_INITDB_DATABASE=productdb
+  # Auth service
+  auth-service:
+    container_name: auth
+    hostname: auth
+    build: ./auth-service
+    environment:
+      - SPRING_R2DBC_URL=r2dbc:postgresql://spring:spring@authdb:5432/authdb
+    depends_on:
+      - auth-service-postgres
+  # Auth service database (PostgreSQL)
+  auth-service-postgres:
+    image: postgres
+    container_name: auth-service-db
+    hostname: authdb
+    restart: always
+    environment:
+      - POSTGRES_USER=spring
+      - POSTGRES_PASSWORD=spring
+      - POSTGRES_DB=authdb
+
 
