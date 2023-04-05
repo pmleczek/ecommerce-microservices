@@ -1,1 +1,21 @@
+services:
+  # Product service
+  product-service:
+    container_name: product-service
+    hostname: product
+    build: ./product-service
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://spring:spring@productdb:27017/productdb?authSource=admin
+    depends_on:
+      - product-service-mongo
+  # Product service database (MongoDB)
+  product-service-mongo:
+    image: mongo
+    container_name: product-service-db
+    hostname: productdb
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=spring
+      - MONGO_INITDB_ROOT_PASSWORD=spring
+      - MONGO_INITDB_DATABASE=productdb
 
