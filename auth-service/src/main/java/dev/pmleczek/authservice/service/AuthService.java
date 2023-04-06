@@ -1,7 +1,11 @@
 package dev.pmleczek.authservice.service;
 
 import dev.pmleczek.authservice.dto.AuthRequestBody;
+import dev.pmleczek.authservice.dto.RegisterRequestBody;
+import dev.pmleczek.authservice.entity.Role;
+import dev.pmleczek.authservice.entity.User;
 import dev.pmleczek.authservice.exception.AuthenticationFailedException;
+import dev.pmleczek.authservice.exception.UserAlreadyExistsException;
 import dev.pmleczek.authservice.exception.UserNotFoundException;
 import dev.pmleczek.authservice.repository.UserRepository;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -29,5 +33,18 @@ public class AuthService {
                     return Mono.error(new AuthenticationFailedException("User authentication failed"));
                 })
                 .switchIfEmpty(Mono.error(new UserNotFoundException("User not found")));
+    }
+
+    public Mono<User> createUser(RegisterRequestBody registerRequestBody) {
+        return userRepository.findUserByEmail(registerRequestBody.email())
+                .flatMap(user -> Mono.error(new UserAlreadyExistsException("User already exists")))
+                .switchIfEmpty(Mono.defer(() -> userRepository.save(new User(
+                        registerRequestBody.firstname(),
+                        registerRequestBody.lastname(),
+                        registerRequestBody.email(),
+                        passwordEncoder.encode(registerRequestBody.password()),
+                        Role.USER
+                ))))
+                .cast(User.class);
     }
 }
