@@ -2,7 +2,6 @@ package dev.pmleczek.authservice.controller;
 
 import dev.pmleczek.authservice.dto.AuthRequestBody;
 import dev.pmleczek.authservice.dto.RegisterRequestBody;
-import dev.pmleczek.authservice.entity.User;
 import dev.pmleczek.authservice.service.AuthService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
