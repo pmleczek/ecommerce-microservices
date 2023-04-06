@@ -2,7 +2,7 @@ package dev.pmleczek.authservice.entity;
 
 
 import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -10,10 +10,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import java.util.Collection;
 import java.util.List;
 
-@Table(name = "_user")
+@Document(collection = "users")
 public class User implements UserDetails {
     @Id
-    private Long id;
+    private String id;
     private String firstname;
     private String lastname;
     private String email;
@@ -66,11 +66,11 @@ public class User implements UserDetails {
         this.role = role;
     }
 
-    public Long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
