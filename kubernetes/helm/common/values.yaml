@@ -1,0 +1,46 @@
+replicaCount: 1
+
+image:
+  tag: latest
+  pullPolicy: Never
+  args: []
+
+ports:
+  - name: http
+    containerPort: 8080
+    protocol: TCP
+
+livenessProbe_enabled: true
+livenessProbe:
+  httpGet:
+    scheme: HTTP
+    path: /actuator/health/liveness
+    port: 8080
+  initialDelaySeconds: 10
+  periodSeconds: 10
+  timeoutSeconds: 2
+  failureThreshold: 20
+  successThreshold: 1
+
+readinessProbe_enabled: true
+readinessProbe:
+  httpGet:
+    scheme: HTTP
+    path: /actuator/health/readiness
+    port: 8080
+  initialDelaySeconds: 10
+  periodSeconds: 10
+  timeoutSeconds: 2
+  failureThreshold: 3
+  successThreshold: 1
+
+configmap:
+  enabled: false
+
+service:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
