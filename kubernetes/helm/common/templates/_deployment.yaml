@@ -10,7 +10,7 @@ metadata:
   name: {{ include "common.fullname" . }}
   labels:
     app.kubernetes.io/name: {{ include "common.name" . }}
-    helm.sh/chart: {{ include "common.chart" }}
+    helm.sh/chart: {{ include "common.chart" . }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   replicas: {{ .Values.replicaCount }}
