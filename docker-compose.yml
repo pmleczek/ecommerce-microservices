@@ -14,7 +14,6 @@ services:
   # Product service
   product-service:
     container_name: product-service
-    hostname: product
     build: ./product-service
     environment:
       - SPRING_DATA_MONGODB_URI=mongodb://spring:spring@productdb:27017/productdb?authSource=admin
@@ -33,7 +32,6 @@ services:
   # Auth service
   auth-service:
     container_name: auth
-    hostname: auth
     build: ./auth-service
     environment:
       - SPRING_DATA_MONGODB_URI=mongodb://spring:spring@authdb:27017/authdb?authSource=admin

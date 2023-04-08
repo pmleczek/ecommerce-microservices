@@ -2,3 +2,10 @@ spring:
   jwt:
     private-key: dev.key
     public-key: dev.key.pub
+  application:
+    name: auth-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka
