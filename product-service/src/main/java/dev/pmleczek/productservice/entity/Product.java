@@ -5,6 +5,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.annotation.Version;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.DocumentReference;
 
 import java.util.Date;
 
@@ -21,6 +22,8 @@ public class Product {
     private Date created;
     @LastModifiedDate
     private Date lastModified;
+    @DocumentReference(lazy=true)
+    private Category category;
 
     public Product() {
     }
@@ -90,6 +93,14 @@ public class Product {
         this.lastModified = lastModified;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
         return "Product{" +
@@ -100,6 +111,7 @@ public class Product {
                 ", price=" + price +
                 ", created=" + created +
                 ", lastModified=" + lastModified +
+                ", category=" + category.getName() +
                 '}';
     }
 
