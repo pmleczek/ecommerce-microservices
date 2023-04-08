@@ -1,4 +1,9 @@
 services:
+  # Discovery service (Eureka)
+  discovery-service:
+    container_name: discovery-service
+    hostname: discovery
+    build: ./discovery-service
   # Product service
   product-service:
     container_name: product-service
