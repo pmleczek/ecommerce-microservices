@@ -1,6 +1,9 @@
 spring:
   application:
     name: product-service
+  jwt:
+    issuer: authsrvc
+    public-key: dev.key.pub
 
 eureka:
   client:
