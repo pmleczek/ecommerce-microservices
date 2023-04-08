@@ -1,5 +1,10 @@
 server:
   port: 8443
+  ssl:
+    enabled: true
+    key-store-password: password
+    key-store: classpath:ks.p12
+    key-store-type: PKCS12
 spring:
   application:
     name: gateway-service

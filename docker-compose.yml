@@ -11,6 +11,8 @@ services:
     container_name: gateway-service
     hostname: gateway
     build: ./gateway-service
+    ports:
+      - "8443:8443"
   # Product service
   product-service:
     container_name: product-service
@@ -37,8 +39,6 @@ services:
       - SPRING_DATA_MONGODB_URI=mongodb://spring:spring@authdb:27017/authdb?authSource=admin
     depends_on:
       - auth-service-mongo
-    ports:
-      - "8080:8080"
   # Auth service database (MongoDB)
   auth-service-mongo:
     image: mongo
