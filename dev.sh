@@ -15,4 +15,8 @@ cd gateway-service
 gradle clean build -x test
 cd ..
 
+cd order-service
+gradle clean build -x test
+cd ..
+
 docker-compose up --build

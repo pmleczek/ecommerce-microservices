@@ -49,3 +49,20 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=spring
       - MONGO_INITDB_ROOT_PASSWORD=spring
       - MONGO_INITDB_DATABASE=authdb
+  # Order service
+  order-service:
+    build: ./order-service
+    environment:
+      - SPRING_R2DBC_URL=r2dbc:postgres://spring:spring@orderdb:5432/orderdb
+    depends_on:
+      - order-service-postgres
+  # Order service database (PostgreSQL)
+  order-service-postgres:
+    image: postgres
+    container_name: order-service-db
+    hostname: orderdb
+    restart: always
+    environment:
+      - POSTGRES_USER=spring
+      - POSTGRES_PASSWORD=spring
+      - POSTGRES_DB=orderdb
