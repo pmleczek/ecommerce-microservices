@@ -33,7 +33,7 @@ services:
       - MONGO_INITDB_DATABASE=productdb
   # Auth service
   auth-service:
-    container_name: auth
+    container_name: auth-service
     build: ./auth-service
     environment:
       - SPRING_DATA_MONGODB_URI=mongodb://spring:spring@authdb:27017/authdb?authSource=admin
