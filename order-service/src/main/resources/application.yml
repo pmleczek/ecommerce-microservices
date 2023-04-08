@@ -1,0 +1,11 @@
+spring:
+  jwt:
+    public-key: dev.key.pub
+    issuer: authsrvc
+  application:
+    name: order-service
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka
