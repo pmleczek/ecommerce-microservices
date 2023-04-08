@@ -11,4 +11,8 @@ cd discovery-service
 gradle clean build -x test
 cd ..
 
+cd gateway-service
+gradle clean build -x test
+cd ..
+
 docker-compose up --build

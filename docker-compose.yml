@@ -4,6 +4,13 @@ services:
     container_name: discovery-service
     hostname: discovery
     build: ./discovery-service
+    ports:
+      - "8761:8761"
+  # Gateway service
+  gateway-service:
+    container_name: gateway-service
+    hostname: gateway
+    build: ./gateway-service
   # Product service
   product-service:
     container_name: product-service
