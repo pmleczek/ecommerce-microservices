@@ -2,6 +2,7 @@ spring:
   jwt:
     private-key: dev.key
     public-key: dev.key.pub
+    issuer: authsrvc
   application:
     name: auth-service
 
