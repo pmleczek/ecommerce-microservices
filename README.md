@@ -11,6 +11,11 @@
 ![Shell Scripts](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![IntelliJ Idea](https://img.shields.io/badge/IntelliJ_IDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 
+## TBD 🚧
+- React frontend
+- Kubernetes + Helm deployment
+- Improving security of the services
+
 ## About
 E-commerce microservices is a project created to revise and practice building microservices with Spring Boot. It consists of 3 core microservices, each with its own database (either MongoDB or PostgreSQL) and of 2 Spring Cloud microservices: Netflix Eureka based discovery-service and Spring Cloud Gateway based gateway-service. All services use Docker and Docker Compose for seamless integration during development and all of the 3 core microservices rely on Spring Security to provide access control and security configuration.
 
