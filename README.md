@@ -31,5 +31,8 @@ E-commerce microservices is a project created to revise and practice building mi
 - Features: Provide product and category data, expose endpoints for managing categories and products
 - Technologies used: Spring Boot, Spring Security, Auth0 java-jwt, Spring Webflux, Spring Data Reactive MongoDB
 #### order-service
-- Features: 
+- Features: Track state of user carts, manage orders
+- Technologies used: Spring Boot, Spring Security, Auth0 java-jwt, Spring Webflux, Spring R2DBC, PostgreSQL Driver
 ### 🟠 Databases:
+- MongoDB
+- PostgreSQL
