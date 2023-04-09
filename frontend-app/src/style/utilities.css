@@ -1,0 +1,92 @@
+/* background */
+.bg-light-gray {
+    background-color: #f5f5f5;
+}
+
+.bg-primary {
+    background-color: #0aae41;
+}
+
+/* border */
+.border-bottom-light-gray {
+    border-bottom-style: solid;
+    border-bottom-color: #f3f3f3;
+    border-bottom-width: 1px;
+}
+
+.border-light-gray {
+    border-color: #f3f3f3;
+}
+
+.border-1 {
+    border-width: 1px;
+}
+
+.border-solid {
+    border-style: solid;
+}
+
+.border-radius-05 {
+    border-radius: 0.5rem;
+}
+
+/* flexbox */
+.flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-1 {
+    gap: 1rem;
+}
+
+/* miscellaneous */
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+/* padding */
+/* all */
+.p-05 {
+    padding: 0.5rem;
+}
+
+/* x-axis */
+.px-3 {
+    padding-left: 3rem;
+    padding-right: 3rem;
+}
+
+/* y-axis */
+.py-05 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.py-125 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+}
+
+/* right */
+.pr-2 {
+    padding-right: 2rem;
+}
+
+/* left */
+.pl-1 {
+    padding-left: 1rem;
+}

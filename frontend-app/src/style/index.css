@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
 
 /* style reset */
-* {
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
     all: unset;
     display: revert;
 }
@@ -10,8 +10,12 @@
     box-sizing: border-box;
 }
 
-/* font settings */
+/* global font settings */
 * {
     font-family: "Poppins", sans-serif;
+}
 
+/* global rules */
+a, button {
+    cursor: pointer;
 }

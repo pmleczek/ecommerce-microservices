@@ -1,0 +1,16 @@
+.navbar-search-container {
+    width: 45%;
+}
+
+.navbar-search-input {
+    width: 65%;
+}
+
+.navbar-search-input::placeholder {
+    color: #757575;
+}
+
+.navbar-nav-button:hover, .navbar-nav-button:active {
+    background-color: #ddd;
+    border-radius: 0.5rem;
+}
