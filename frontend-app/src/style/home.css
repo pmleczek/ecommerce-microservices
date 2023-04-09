@@ -1,0 +1,17 @@
+@media (min-width: 700px) {
+    html, body, #root, .home-container {
+        height: 100vh;
+    }
+
+    .home-container main {
+        flex: 1;
+    }
+
+    .filter-column {
+        width: 20%;
+    }
+
+    .content-column {
+        width: 80%;
+    }
+}

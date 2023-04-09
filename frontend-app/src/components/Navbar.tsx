@@ -30,7 +30,6 @@ const Navbar = () => {
                         <span className="sr-only">Favorite products</span>
                         <Heart width={28} height={28} strokeWidth={1.5}/>
                     </Link>
-
                 </nav>
             </div>
         </div>

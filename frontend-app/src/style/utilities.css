@@ -14,6 +14,12 @@
     border-bottom-width: 1px;
 }
 
+.border-right-light-gray {
+    border-right-style: solid;
+    border-right-color: #f3f3f3;
+    border-right-width: 1px;
+}
+
 .border-light-gray {
     border-color: #f3f3f3;
 }
@@ -33,6 +39,10 @@
 /* flexbox */
 .flex {
     display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
 }
 
 .align-center {
@@ -89,4 +99,10 @@
 /* left */
 .pl-1 {
     padding-left: 1rem;
+}
+
+/* sizing */
+/* height */
+.h-35 {
+    height: 3.5rem;
 }
