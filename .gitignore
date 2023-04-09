@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/java,gradle,macos,linux,windows,intellij+all,visualstudiocode
-# Edit at https://www.toptal.com/developers/gitignore?templates=java,gradle,macos,linux,windows,intellij+all,visualstudiocode
+# Created by https://www.toptal.com/developers/gitignore/api/java,linux,macos,gradle,windows,intellij+all,visualstudiocode,react,sass
+# Edit at https://www.toptal.com/developers/gitignore?templates=java,linux,macos,gradle,windows,intellij+all,visualstudiocode,react,sass
 
 ### Intellij+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -163,6 +163,27 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+### react ###
+.DS_*
+logs
+**/*.backup.*
+**/*.back.*
+
+node_modules
+bower_components
+
+*.sublime*
+
+psd
+thumb
+sketch
+
+### Sass ###
+.sass-cache/
+*.css.map
+*.sass.map
+*.scss.map
+
 ### VisualStudioCode ###
 .vscode/*
 !.vscode/settings.json
@@ -235,4 +256,4 @@ gradle-app.setting
 # Java heap dump
 *.hprof
 
-# End of https://www.toptal.com/developers/gitignore/api/java,gradle,macos,linux,windows,intellij+all,visualstudiocode
+# End of https://www.toptal.com/developers/gitignore/api/java,linux,macos,gradle,windows,intellij+all,visualstudiocode,react,sass
