@@ -1,9 +1,11 @@
 import React from 'react';
+import {BrowserRouter, Routes} from "react-router-dom";
 
-function App() {
+const App = () => {
   return (
-    <div>
-    </div>
+    <BrowserRouter>
+      <Routes></Routes>
+    </BrowserRouter>
   );
 }
 
