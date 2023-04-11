@@ -1,0 +1,22 @@
+.select, .select-options div {
+    height: 43px;
+}
+
+.select-options div {
+    line-height: 43px;
+}
+
+.select.show {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.select-options div:not(.select-options div:first-child) {
+    border-top: 1px solid #f3f3f3;
+}
+
+.select-options, .select-options div:last-child {
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
