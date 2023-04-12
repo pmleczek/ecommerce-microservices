@@ -10,6 +10,7 @@ interface SelectOption {
 }
 
 interface Props {
+    label?: string;
     initialValue: string;
     options: SelectOption[];
     onChange: (newValue: string | null) => void;
@@ -39,7 +40,7 @@ const Select = (props: Props) => {
                 + props.className + (show ? " show" : "")}
             onClick={e => setShow(!show)} ref={ref}>
             <div className="flex px-1 w-full align-center justify-between">
-                <span>{props.options.filter(option => option.value === value)[0].title}</span>
+                <span>{props.label ? props.label : ""}{props.options.filter(option => option.value === value)[0].title}</span>
                 {show ? <ChevronUp width={20} height={20} strokeWidth={2}/> :
                     <ChevronDown width={20} height={20} strokeWidth={2}/>}
             </div>
